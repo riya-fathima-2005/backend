@@ -1,0 +1,325 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Admin Dashboard{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/print.css' %}" media="print">
+    <link rel="stylesheet" href="{% static 'css/animations.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/colors.css' %}">
+    <link rel="stylesheet" href="{% static 'css/typography.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tables.css' %}">
+
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'safari-pinned-tab.svg' %}" color="#5bbad5">
+    
+    <!-- Material Design Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font/css/materialdesignicons.min.css">
+  
+
+    <style>
+        /* ===================================
+   PAGE BACKGROUND
+=================================== */
+
+.edit-venue-page {
+
+    background: #f4f4f4;
+
+    min-height: 100vh;
+
+    padding: 40px 0;
+}
+
+/* ===================================
+   CARD
+=================================== */
+
+.edit-card {
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    padding: 45px;
+
+    border: 1px solid #e5e5e5;
+
+    box-shadow:
+        0 15px 45px rgba(0,0,0,0.08);
+}
+
+/* ===================================
+   HEADER
+=================================== */
+
+.edit-header {
+
+    margin-bottom: 35px;
+}
+
+/* TITLE */
+
+.edit-title {
+
+    color: #111111;
+
+    font-size: 38px;
+
+    font-weight: 700;
+
+    font-family: "Poppins", sans-serif;
+
+    margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+
+.edit-subtitle {
+
+    color: #666666;
+
+    font-size: 15px;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===================================
+   FORM GROUP
+=================================== */
+
+.form-group-custom {
+
+    margin-bottom: 24px;
+}
+
+/* LABEL */
+
+.custom-label {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family: "Poppins", sans-serif;
+}
+
+/* ===================================
+   INPUT
+=================================== */
+
+.custom-input {
+
+    width: 100%;
+
+    height: 55px;
+
+    border-radius: 14px;
+
+    border: 1px solid #d9d9d9;
+
+    background: #ffffff;
+
+    padding: 12px 18px;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s ease;
+
+    outline: none;
+}
+
+/* TEXTAREA */
+
+.custom-textarea {
+
+    height: auto;
+
+    min-height: 140px;
+
+    resize: none;
+
+    padding-top: 16px;
+}
+
+/* FOCUS */
+
+.custom-input:focus {
+
+    border-color: #000000;
+
+    box-shadow:
+        0 0 0 4px rgba(0,0,0,0.08);
+}
+
+/* FILE INPUT */
+
+.file-input {
+
+    padding-top: 14px;
+}
+
+/* ===================================
+   BUTTONS
+=================================== */
+
+.button-group {
+
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+/* UPDATE BUTTON */
+
+.update-btn {
+
+    background: #111111;
+
+    color: white;
+
+    border: none;
+
+    height: 54px;
+
+    padding: 0 30px;
+
+    border-radius: 14px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.update-btn:hover {
+
+    background: #000000;
+
+    transform: translateY(-2px);
+}
+
+/* CANCEL BUTTON */
+
+.cancel-btn {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    height: 54px;
+
+    padding: 0 30px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #cccccc;
+
+    color: #111111;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    font-family: "Poppins", sans-serif;
+
+    transition: 0.3s ease;
+}
+
+/* HOVER */
+
+.cancel-btn:hover {
+
+    background: #f2f2f2;
+
+    color: #000000;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+
+    .edit-card {
+
+        padding: 28px;
+    }
+
+    .edit-title {
+
+        font-size: 30px;
+    }
+
+    .button-group {
+
+        flex-direction: column;
+    }
+
+    .update-btn,
+    .cancel-btn {
+
+        width: 100%;
+    }
+
+}
+    </style>
+</head>
+<body>
+
+<div class="layout-wrapper">
+
+    {% include 'includes/topbar.html' %}
+
+    {% include 'includes/sidebar.html' %}
+
+    <main class="main-content">
+        {% block content %}
+
+        
+        {% endblock %}
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-header">
+    
+</div>
+
+<div class="cards-container">
+
+    <div class="dashboard-card">
+        <div>
+            <h3>Users</h3>
+            <h1>120</h1>
+        </div>
+
+        <i class="mdi mdi-account-group"></i>
+    </div>
+
+    <div class="dashboard-card">
+        <div>
+            <h3>Bookings</h3>
+            <h1>56</h1>
+        </div>
+
+        <i class="mdi mdi-calendar-check"></i>
+    </div>
+
+    <div class="dashboard-card">
+        <div>
+            <h3>Revenue</h3>
+            <h1>$5000</h1>
+        </div>
+
+        <i class="mdi mdi-currency-usd"></i>
+    </div>
+
+</div>
+
+<div class="table-section">
+
+    <h2>Recent Bookings</h2>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Venue</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>Riya</td>
+                <td>Royal Palace</td>
+                <td>Confirmed</td>
+            </tr>
+
+            <tr>
+                <td>John</td>
+                <td>Grand Hall</td>
+                <td>Pending</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

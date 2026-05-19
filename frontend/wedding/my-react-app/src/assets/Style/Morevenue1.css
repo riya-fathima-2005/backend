@@ -1,0 +1,269 @@
+/* =========================
+   LUXURY MODERN VENUE PAGE
+========================= */
+
+.morevenue-page {
+  background: #f4f1eb;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* HERO */
+
+.morevenue-hero {
+  position: relative;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.morevenue-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* OVERLAY */
+
+.morevenue-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.25)
+    );
+
+  display: flex;
+  align-items: center;
+}
+
+/* HERO CONTENT */
+
+.hero-content {
+  max-width: 650px;
+  margin-left: 8%;
+  color: white;
+}
+
+.hero-tag {
+  background: rgba(255,255,255,0.15);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  padding: 10px 22px;
+
+  border-radius: 50px;
+
+  display: inline-block;
+
+  margin-bottom: 25px;
+
+  backdrop-filter: blur(10px);
+
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.morevenue-title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.morevenue-location {
+  font-size: 22px;
+  color: #ececec;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  padding: 16px 38px;
+
+  border: none;
+  border-radius: 50px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.4s ease;
+}
+
+/* PRIMARY */
+
+.primary-btn {
+  background: white;
+  color: #111;
+}
+
+.primary-btn:hover {
+  background: #d7c5a2;
+  transform: translateY(-3px);
+}
+
+/* SECONDARY */
+
+.secondary-btn {
+  background: transparent;
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.secondary-btn:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+/* CONTENT SECTION */
+
+.morevenue-content {
+  margin-top: -100px;
+  position: relative;
+  z-index: 10;
+}
+
+/* MAIN CARD */
+
+.main-card {
+  background: white;
+
+  border-radius: 40px;
+
+  padding: 70px;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.08);
+}
+
+/* TOP GRID */
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* HEADING */
+
+.content-heading {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #111;
+}
+
+/* DESCRIPTION */
+
+.morevenue-description {
+  font-size: 17px;
+  line-height: 2;
+  color: #666;
+}
+
+/* INFO CARD */
+
+.info-card {
+  background: #faf7f2;
+
+  border-radius: 30px;
+
+  padding: 35px;
+}
+
+.info-card h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.info-card p,
+.info-card li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.info-card ul {
+  padding-left: 20px;
+}
+
+/* BUTTON */
+
+.book-btn {
+  width: 100%;
+
+  margin-top: 50px;
+
+  padding: 20px;
+
+  border: none;
+  border-radius: 50px;
+
+  background: #111;
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: 0.4s ease;
+}
+
+.book-btn:hover {
+  background: #d7c5a2;
+  color: black;
+
+  transform: translateY(-4px);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 992px) {
+
+  .top-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    margin: 0 20px;
+  }
+
+  .morevenue-title {
+    font-size: 48px;
+  }
+
+  .main-card {
+    padding: 35px;
+    border-radius: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .morevenue-title {
+    font-size: 38px;
+  }
+
+  .morevenue-location {
+    font-size: 17px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+}

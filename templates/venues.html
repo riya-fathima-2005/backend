@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Venues{% endblock %}
+
+{% block content %}
+
+<div class="dashboard-header">
+    <h1>All Venues</h1>
+</div>
+
+<div class="custom-table">
+
+    <table>
+
+        <thead>
+
+            <tr>
+                <th>ID</th>
+                <th>Image</th>
+                <th>Venue Name</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th>Description</th>
+                <th>Actions</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            {% for venue in venues %}
+
+            <tr>
+
+                <td>{{ venue.id }}</td>
+
+                <td>
+
+                    {% if venue.image %}
+                        <img src="{{ venue.image.url }}" class="venue-img">
+                    {% else %}
+                        No Image
+                    {% endif %}
+
+                </td>
+
+                <td>{{ venue.name }}</td>
+
+                <td>{{ venue.location }}</td>
+
+                <td>₹ {{ venue.price }}</td>
+
+                <td>{{ venue.description }}</td>
+
+                <td>
+
+                    <div class="action-buttons">
+
+                        <a href="{% url 'edit_venue' venue.id %}" class="edit-icon">
+                            <i class="mdi mdi-pencil"></i>
+                        </a>
+
+                        <a href="{% url 'delete_venue' venue.id %}" class="delete-icon">
+                            <i class="mdi mdi-delete"></i>
+                        </a>
+
+                    </div>
+
+                </td>
+
+            </tr>
+
+            {% empty %}
+
+            <tr>
+
+                <td colspan="7" class="empty-row">
+                    No Venues Found
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+        </tbody>
+
+    </table>
+
+</div>
+
+{% endblock %}

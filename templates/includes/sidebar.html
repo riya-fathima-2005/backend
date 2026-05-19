@@ -1,0 +1,76 @@
+{% load static %}
+
+<aside class="sidebar">
+
+    <div class="sidebar-logo">
+        
+    </div>
+
+    <ul class="sidebar-menu">
+
+        <li>
+            <a href="{% url 'index' %}">
+                <i class="mdi mdi-view-dashboard"></i>
+                Dashboard
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'allusers' %}">
+                <i class="mdi mdi-account-group"></i>
+                All Users
+            </a>
+        </li>
+
+        <!-- <li>
+            <a href="{% url 'allusergroups' %}">
+                <i class="mdi mdi-account-multiple"></i>
+                User Groups
+            </a>
+        </li> -->
+
+        <li>
+            <a href="{% url 'venues' %}">
+                <i class="mdi mdi-office-building"></i>
+                Venue
+            </a>
+        </li>
+
+        <!-- <li>
+            <a href="{% url 'hosts' %}">
+                <i class="mdi mdi-account-tie"></i>
+                Hosts
+            </a>
+        </li> -->
+
+        <li>
+            <a href="{% url 'bookings' %}">
+                <i class="mdi mdi-calendar-check"></i>
+                Booking
+            </a>
+        </li>
+
+        <!-- <li>
+            <a href="{% url 'payments' %}">
+                <i class="mdi mdi-credit-card"></i>
+                Payment
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'messages' %}">
+                <i class="mdi mdi-message-text"></i>
+                Message
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'settings' %}">
+                <i class="mdi mdi-cog"></i>
+                Settings
+            </a>
+        </li> -->
+
+    </ul>
+
+</aside>

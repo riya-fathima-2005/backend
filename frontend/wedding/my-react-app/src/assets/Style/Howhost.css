@@ -1,0 +1,114 @@
+.howhost-section {
+  background: #f8f8f8;
+  padding: 100px 0;
+}
+
+/* HEADING */
+
+.host-subtitle {
+  color: #070707;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.howhost-heading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111;
+  font-family: "Poppins", sans-serif;
+}
+
+/* GRID */
+
+.host-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+
+.host-card {
+  background: white;
+  border-radius: 25px;
+  padding: 40px 30px;
+
+  position: relative;
+  overflow: hidden;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.host-card:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* NUMBER */
+
+.host-number {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #121211,
+    #0b0b0a
+  );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-weight: 700;
+
+  margin-bottom: 25px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* TITLE */
+
+.step-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 15px;
+
+  font-family: "Poppins", sans-serif;
+}
+
+/* DESCRIPTION */
+
+.step-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .howhost-heading {
+    font-size: 34px;
+  }
+
+  .host-card {
+    padding: 35px 25px;
+  }
+
+}
