@@ -5,9 +5,25 @@
 
 {% block content %}
 
+<!-- HEADER -->
+
 <div class="dashboard-header">
-    <h1>All Venues</h1>
+
+    <div class="header-flex">
+
+        <h1>All Venues</h1>
+
+        <!-- ADD BUTTON -->
+
+        <a href="{% url 'add_venue' %}" class="add-btn">
+            + Add New Venue
+        </a>
+
+    </div>
+
 </div>
+
+<!-- TABLE -->
 
 <div class="custom-table">
 

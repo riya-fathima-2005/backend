@@ -79,6 +79,30 @@ def delete_venue(request, id):
     return redirect('venues')
 
 
+def add_venue(request):
+
+    if request.method == 'POST':
+
+        name = request.POST.get('name')
+        location = request.POST.get('location')
+        price = request.POST.get('price')
+        description = request.POST.get('description')
+        image = request.FILES.get('image')
+
+        Venue.objects.create(
+            name=name,
+            location=location,
+            price=price,
+            description=description,
+            image=image
+        )
+
+        return redirect('venues')
+
+    return render(request, 'add_venue.html')
+
+
+
 
 # ================= API =================
 @api_view(['GET'])
