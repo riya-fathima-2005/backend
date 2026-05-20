@@ -14,7 +14,7 @@ const Banner = () => {
       <div className="banner-overlay"></div>
 
       {/* CONTENT */}
-      <div className="banner-content">
+      <div className="banner-side ">
 
         {/* TAG */}
         <div className="banner-tag">
@@ -51,4 +51,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;  
+export default Banner;

@@ -11,15 +11,10 @@
   position: relative;
   overflow: hidden;
 
-  display: flex;
-  align-items: center;
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
 }
-
 
 /* =========================
    OVERLAY
@@ -29,23 +24,22 @@
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.55);
 }
 
 /* =========================
    CONTENT
 ========================= */
 
-.banner-content {
-  position: relative;
+.banner-side {
+  position: absolute;
+  margin-left: 80px;
+  top: 38%;
+  left: 8%;
+
+  transform: translateY(-38%);
+
   z-index: 5;
-
-  margin-left: 8%;
-
-  display: flex;
-  flex-direction: column;
-
-  align-items: flex-start;
 
   color: white;
 }
@@ -65,7 +59,9 @@
 
   border: 1px solid rgba(255,255,255,0.2);
 
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(10px);
 
   font-size: 11px;
 
@@ -81,17 +77,21 @@
 ========================= */
 
 .heading-overlay {
+  display: block;
+
   font-family: "Cormorant Garamond", serif;
 
-  font-size: 5rem;
+  font-size: 4.5rem;
 
-  line-height: 1.1;
+  line-height: 1.05;
 
   font-weight: 700;
 
   margin: 0;
 
   color: white;
+
+  text-shadow: 0 10px 30px rgba(0,0,0,0.35);
 }
 
 /* =========================
@@ -107,15 +107,15 @@
 ========================= */
 
 .small-line {
-  margin-top: 12px;
+  margin-top: 14px;
 
   font-size: 14px;
 
   letter-spacing: 2px;
 
-  font-family: "Poppins", sans-serif;
-
   color: rgba(255,255,255,0.85);
+
+  font-family: "Poppins", sans-serif;
 }
 
 /* =========================
@@ -125,7 +125,7 @@
 .faq-button {
   display: inline-block;
 
-  margin-top: 25px;
+  margin-top: 22px;
 
   padding: 14px 34px;
 
@@ -155,11 +155,12 @@
 @media (max-width: 768px) {
 
   .banner-content {
-    margin-left: 6%;
+    left: 6%;
+    top: 40%;
   }
 
   .heading-overlay {
-    font-size: 3.2rem;
+    font-size: 3rem;
   }
 
   .small-line {
